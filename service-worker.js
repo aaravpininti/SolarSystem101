@@ -4,6 +4,7 @@ const ASSETS = [
   '/index.html',
   '/style.css',
   '/script.js',
+  '/images/mercury.png',
   'https://science.nasa.gov/wp-content/uploads/2023/09/sun-blasting-a-flare-web.jpg'
 ];
 
