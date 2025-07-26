@@ -4,7 +4,7 @@ const planets = {
   mercury: {
     name: "Mercury",
     desc: "The smallest and innermost planet in the Solar System.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/mercury-messenger-globe-color-web.jpg",
+    img: "images/mercury.png",
     stats: [
       "Diameter: 4,879 km",
       "Mass: 3.3 × 10²³ kg",
