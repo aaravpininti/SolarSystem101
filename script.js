@@ -23,7 +23,7 @@ const planets = {
   venus: {
     name: "Venus",
     desc: "The second planet from the Sun and the hottest planet in our Solar System.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/venus-mariner-10-image-web.jpg",
+    img: "images/venus.png",
     stats: [
       "Diameter: 12,104 km",
       "Mass: 4.87 × 10²⁴ kg",
@@ -42,7 +42,7 @@ const planets = {
   earth: {
     name: "Earth",
     desc: "Our home planet, the only known planet to support life.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/earth-apollo-17-web.jpg",
+    img: "images/earth.png",
     stats: [
       "Diameter: 12,756 km",
       "Mass: 5.97 × 10²⁴ kg",
@@ -61,7 +61,7 @@ const planets = {
   mars: {
     name: "Mars",
     desc: "The Red Planet, known for its rusty iron oxide surface.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/mars-true-color-web.jpg",
+    img: "images/mars.png",
     stats: [
       "Diameter: 6,792 km",
       "Mass: 6.39 × 10²³ kg",
@@ -80,7 +80,7 @@ const planets = {
   jupiter: {
     name: "Jupiter",
     desc: "The largest planet in our Solar System, a gas giant.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/jupiter-juno-web.jpg",
+    img: "images/jupiter.png",
     stats: [
       "Diameter: 142,984 km",
       "Mass: 1.898 × 10²⁷ kg",
@@ -99,7 +99,7 @@ const planets = {
   saturn: {
     name: "Saturn",
     desc: "Famous for its spectacular ring system.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/saturn-cassini-web.jpg",
+    img: "images/saturn.png",
     stats: [
       "Diameter: 120,536 km",
       "Mass: 5.683 × 10²⁶ kg",
@@ -118,7 +118,7 @@ const planets = {
   uranus: {
     name: "Uranus",
     desc: "An ice giant that rotates on its side.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/uranus-voyager-2-web.jpg",
+    img: "images/uranus.png",
     stats: [
       "Diameter: 51,118 km",
       "Mass: 8.681 × 10²⁵ kg",
@@ -137,7 +137,7 @@ const planets = {
   neptune: {
     name: "Neptune",
     desc: "The windiest planet in our Solar System.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/neptune-voyager-2-web.jpg",
+    img: "images/neptune.png",
     stats: [
       "Diameter: 49,528 km",
       "Mass: 1.024 × 10²⁶ kg",
