@@ -160,7 +160,7 @@ const dwarfPlanets = {
   pluto: {
     name: "Pluto",
     desc: "The most famous dwarf planet, formerly the ninth planet.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/pluto-color-image-web.jpg",
+    img: "images/pluto.png",
     stats: [
       "Diameter: 2,374 km",
       "Mass: 1.303 × 10²² kg",
@@ -179,7 +179,7 @@ const dwarfPlanets = {
   eris: {
     name: "Eris",
     desc: "The most massive dwarf planet in our Solar System.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/eris-artist-concept-web.jpg",
+    img: "images/eris.png",
     stats: [
       "Diameter: 2,326 km",
       "Mass: 1.66 × 10²² kg",
@@ -198,7 +198,7 @@ const dwarfPlanets = {
   ceres: {
     name: "Ceres",
     desc: "The largest object in the asteroid belt between Mars and Jupiter.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/ceres-dawn-web.jpg",
+    img: "images/ceres.png",
     stats: [
       "Diameter: 940 km",
       "Mass: 9.39 × 10²⁰ kg",
@@ -217,7 +217,7 @@ const dwarfPlanets = {
   makemake: {
     name: "Makemake",
     desc: "One of the largest dwarf planets in the Kuiper Belt.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/makemake-artist-concept-web.jpg",
+    img: "images/makemake.png",
     stats: [
       "Diameter: 1,430 km",
       "Mass: 3.1 × 10²¹ kg",
@@ -236,7 +236,7 @@ const dwarfPlanets = {
   haumea: {
     name: "Haumea",
     desc: "An elongated dwarf planet with a very fast rotation.",
-    img: "https://science.nasa.gov/wp-content/uploads/2023/09/haumea-artist-concept-web.jpg",
+    img: "images/haumea.png",
     stats: [
       "Diameter: 1,632 km (longest axis)",
       "Mass: 4.01 × 10²¹ kg",
