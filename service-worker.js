@@ -17,7 +17,7 @@ const ASSETS = [
   '/images/ceres.png',
   '/images/makemake.png',
   '/images/haumea.png',
-  'https://science.nasa.gov/wp-content/uploads/2023/09/sun-blasting-a-flare-web.jpg'
+  '/images/sun.png',
 ];
 
 self.addEventListener('install', (e) => {
