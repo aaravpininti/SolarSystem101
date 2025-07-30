@@ -305,10 +305,10 @@ navBtns.forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     const targetPage = btn.dataset.page;
-    
+
     navBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    
+
     pages.forEach(page => page.classList.remove('active'));
     document.getElementById(targetPage + '-page').classList.add('active');
   });
@@ -318,7 +318,7 @@ navBtns.forEach(btn => {
 function setupPlanetButtons(containerId, planetData, imgId, nameId, descId, factsId) {
   const container = document.getElementById(containerId);
   if (!container) return;
-  
+
   const buttons = container.querySelectorAll('.planet-btn');
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -366,18 +366,88 @@ function setupPlanetButtons(containerId, planetData, imgId, nameId, descId, fact
 // Setup planet buttons for planets page
 setupPlanetButtons('planets-page', planets, 'planet-img', 'planet-name', 'planet-desc', null);
 
+// Load Mercury data by default when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const mercuryData = planets.mercury;
+  if (mercuryData) {
+    // Update basic info
+    document.getElementById('planet-img').src = mercuryData.img;
+    document.getElementById('planet-name').textContent = mercuryData.name;
+    document.getElementById('planet-desc').textContent = mercuryData.desc;
+
+    // Update statistics
+    const statsList = document.getElementById('planet-stats');
+    if (statsList) {
+      statsList.innerHTML = '';
+      mercuryData.stats.forEach(stat => {
+        const li = document.createElement('li');
+        const parts = stat.split(': ');
+        li.innerHTML = `<strong>${parts[0]}:</strong> ${parts[1]}`;
+        statsList.appendChild(li);
+      });
+    }
+
+    // Update content sections
+    const physicalContent = document.getElementById('physical-content');
+    const compositionContent = document.getElementById('composition-content');
+    const fourthTitle = document.getElementById('fourth-title');
+    const fourthContent = document.getElementById('fourth-content');
+
+    if (physicalContent) physicalContent.textContent = mercuryData.physical;
+    if (compositionContent) compositionContent.textContent = mercuryData.composition;
+    if (fourthTitle) fourthTitle.textContent = mercuryData.fourthTitle;
+    if (fourthContent) fourthContent.textContent = mercuryData.fourthContent;
+  }
+
+  // Load Pluto data by default for Everything Beyond page
+  const plutoData = dwarfPlanets.pluto;
+  if (plutoData) {
+    // Update basic info
+    const dwarfImg = document.getElementById('dwarf-img');
+    const dwarfName = document.getElementById('dwarf-name');
+    const dwarfDesc = document.getElementById('dwarf-desc');
+
+    if (dwarfImg) dwarfImg.src = plutoData.img;
+    if (dwarfName) dwarfName.textContent = plutoData.name;
+    if (dwarfDesc) dwarfDesc.textContent = plutoData.desc;
+
+    // Update statistics
+    const dwarfStatsList = document.getElementById('dwarf-stats');
+    if (dwarfStatsList) {
+      dwarfStatsList.innerHTML = '';
+      plutoData.stats.forEach(stat => {
+        const li = document.createElement('li');
+        const parts = stat.split(': ');
+        li.innerHTML = `<strong>${parts[0]}:</strong> ${parts[1]}`;
+        dwarfStatsList.appendChild(li);
+      });
+    }
+
+    // Update content sections
+    const dwarfPhysical = document.getElementById('dwarf-physical');
+    const dwarfComposition = document.getElementById('dwarf-composition');
+    const dwarfFourthTitle = document.getElementById('dwarf-fourth-title');
+    const dwarfFourthContent = document.getElementById('dwarf-fourth-content');
+
+    if (dwarfPhysical) dwarfPhysical.textContent = plutoData.physical;
+    if (dwarfComposition) dwarfComposition.textContent = plutoData.composition;
+    if (dwarfFourthTitle) dwarfFourthTitle.textContent = plutoData.fourthTitle;
+    if (dwarfFourthContent) dwarfFourthContent.textContent = plutoData.fourthContent;
+  }
+});
+
 // Setup dwarf planet buttons for beyond page
 function setupDwarfPlanetButtons() {
   const container = document.getElementById('beyond-page');
   if (!container) return;
-  
+
   const buttons = container.querySelectorAll('.planet-btn');
   const planetInfo = container.querySelector('.planet-info');
   const dwarfSections = document.getElementById('dwarf-sections');
   const asteroidsSections = document.getElementById('asteroids-comets-sections');
   const beltsSections = document.getElementById('belts-sections');
   const oortSections = document.getElementById('oort-edge-sections');
-  
+
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const planet = btn.dataset.planet;
@@ -395,7 +465,7 @@ function setupDwarfPlanetButtons() {
         const data = dwarfPlanets[planet];
         planetInfo.style.display = 'flex';
         dwarfSections.style.display = 'flex';
-        
+
         document.getElementById('dwarf-img').src = data.img;
         document.getElementById('dwarf-name').textContent = data.name;
         document.getElementById('dwarf-desc').textContent = data.desc;
